@@ -1,0 +1,26 @@
+{
+  "name": "vkabachenko/yii2-filepond",
+  "description": "Yii2 upload file module based on filepond js library",
+  "keywords": ["yii", "upload", "file", "filepond"],
+  "type": "yii2-extension",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/vkabachenko/yii2-filepond/issues",
+    "source": "https://github.com/vkabachenko/yii2-filepond"
+  },
+  "authors": [
+    {
+      "name": "Kabachenko Viktor",
+      "email": "vkabachenko@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "^2.0.11",
+    "npm-asset/filepond": "^4.4.11"
+  },
+  "autoload": {
+    "psr-4": {
+      "vkabachenko\\filepond\\": ""
+    }
+  }
+}
