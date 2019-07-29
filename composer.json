@@ -15,12 +15,18 @@
     }
   ],
   "require": {
-    "yiisoft/yii2": "^2.0.11",
+    "yiisoft/yii2": "~2.0.14",
     "npm-asset/filepond": "^4.4.11"
   },
   "autoload": {
     "psr-4": {
       "vkabachenko\\filepond\\": ""
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
 }

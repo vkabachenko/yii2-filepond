@@ -2,15 +2,14 @@
 
 namespace vkabachenko\filepond;
 
-/**
- * filepond module definition class
- */
 class Module extends \yii\base\Module
 {
     /**
      * {@inheritdoc}
      */
     public $controllerNamespace = 'vkabachenko\filepond\controllers';
+
+    public $basePath = '@runtime/temp-upload/';
 
     /**
      * {@inheritdoc}
@@ -19,6 +18,6 @@ class Module extends \yii\base\Module
     {
         parent::init();
 
-        // custom initialization code goes here
+        $this->basePath = \Yii::getAlias($this->basePath);
     }
 }
