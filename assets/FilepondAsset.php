@@ -7,7 +7,7 @@ use yii\web\AssetBundle;
 
 class FilepondAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/npm-asset/filepond';
+    public $sourcePath = '@npm/filepond';
     public $js = [
         'dist/filepond.min.js'
     ];

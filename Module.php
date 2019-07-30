@@ -7,7 +7,7 @@ class Module extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'vkabachenko\filepond\controllers';
+    public $controllerNamespace = '\vkabachenko\filepond\controllers';
 
     public $basePath = '@runtime/temp-upload/';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\modules\filepond\controllers;
+namespace vkabachenko\filepond\controllers;
 
 use yii\filters\VerbFilter;
 use yii\helpers\FileHelper;
@@ -28,7 +28,13 @@ class MainController extends Controller
         ];
     }
 
+    public function beforeAction($action)
+    {
+        $this->enableCsrfValidation = false;
 
+        return parent::beforeAction($action);
+    }
+    
     /**
      * @return string
      * @throws \yii\base\Exception
@@ -38,6 +44,7 @@ class MainController extends Controller
         $file = UploadedFile::getInstanceByName('file');
 
         $filePath = \Yii::$app->security->generateRandomString();
+        FileHelper::createDirectory($this->module->basePath . $filePath);
 
         $file->saveAs($this->module->basePath . $filePath . '/' . $file->name);
 
@@ -55,4 +62,5 @@ class MainController extends Controller
 
         return '';
     }
+
 }

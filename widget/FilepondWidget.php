@@ -10,6 +10,8 @@ use yii\widgets\InputWidget;
 
 class FilepondWidget extends InputWidget
 {
+    public $moduleId = 'filepond';
+
     public function init()
     {
         $this->options = [
@@ -34,8 +36,8 @@ class FilepondWidget extends InputWidget
 
         FilepondAsset::register($view);
 
-        $urlProcess = Url::to(['main/upload']);
-        $urlRevert = Url::to(['main/delete']);
+        $urlProcess = Url::to(['/' . $this->moduleId . '/main/upload']);
+        $urlRevert = Url::to(['/' . $this->moduleId . '/main/delete']);
 
         $script = <<<JS
             FilePond.setOptions({
