@@ -34,14 +34,22 @@ class MainController extends Controller
 
         return parent::beforeAction($action);
     }
-    
+
     /**
      * @return string
      * @throws \yii\base\Exception
      */
     public function actionUpload()
     {
-        $file = UploadedFile::getInstanceByName('file');
+        $post = \Yii::$app->request->post();
+        reset($post);
+        $fileName = key($post);
+        $attribute = \Yii::$app->request->post($fileName);
+        if (is_array($attribute)) {
+            reset($attribute);
+            $fileName .= '[' . key($attribute) . ']';
+        }
+        $file = UploadedFile::getInstanceByName($fileName);
 
         $filePath = \Yii::$app->security->generateRandomString();
         FileHelper::createDirectory($this->module->basePath . $filePath);
