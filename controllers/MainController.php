@@ -47,8 +47,10 @@ class MainController extends Controller
         $attribute = \Yii::$app->request->post($fileName);
         if (is_array($attribute)) {
             reset($attribute);
-            $fileName .= '[' . key($attribute) . ']';
+            $key = key($attribute);
+            $fileName .= '[' . $key . ']' . (is_array($attribute[$key]) ? '[0]' : '');
         }
+
         $file = UploadedFile::getInstanceByName($fileName);
 
         $filePath = \Yii::$app->security->generateRandomString();
