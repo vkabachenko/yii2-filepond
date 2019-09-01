@@ -11,11 +11,13 @@ use yii\widgets\InputWidget;
 class FilepondWidget extends InputWidget
 {
     public $moduleId = 'filepond';
+    public $multiple = false;
 
     public function init()
     {
         $this->options = [
-            'class' => 'filepond'
+            'class' => 'filepond',
+            'multiple' => $this->multiple
         ];
     }
 
