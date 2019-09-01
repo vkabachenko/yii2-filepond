@@ -16,7 +16,8 @@
   ],
   "require": {
     "yiisoft/yii2": "~2.0.14",
-    "npm-asset/filepond": "^4.4.11"
+    "npm-asset/filepond": "^4.4.11",
+    "npm-asset/filepond-plugin-file-validate-type": "^1.2.4"
   },
   "autoload": {
     "psr-4": {
