@@ -29,8 +29,7 @@
     "npm-asset/filepond-plugin-image-resize": "^2.0.4",
     "npm-asset/filepond-plugin-image-transform": "^3.4.3",
     "npm-asset/filepond-plugin-image-exif-orientation": "^1.0.6",
-    "npm-asset/filepond-plugin-image-validate-size": "^1.2.3",
-    "npm-asset/filepond-plugin-image-filter": "^1.0.0"
+    "npm-asset/filepond-plugin-image-validate-size": "^1.2.3"
   },
   "autoload": {
     "psr-4": {
