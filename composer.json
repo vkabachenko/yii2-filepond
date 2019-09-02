@@ -17,7 +17,20 @@
   "require": {
     "yiisoft/yii2": "~2.0.14",
     "npm-asset/filepond": "^4.4.11",
-    "npm-asset/filepond-plugin-file-validate-type": "^1.2.4"
+    "npm-asset/filepond-plugin-file-rename": "^1.1.4",
+    "npm-asset/filepond-plugin-file-encode": "^2.1.4",
+    "npm-asset/filepond-plugin-file-validate-size": "^2.2.0",
+    "npm-asset/filepond-plugin-file-validate-type": "^1.2.4",
+    "npm-asset/filepond-plugin-file-metadata": "^1.0.6",
+    "npm-asset/filepond-plugin-file-poster": "^2.2.0",
+    "npm-asset/filepond-plugin-image-preview": "^4.4.0",
+    "npm-asset/filepond-plugin-image-edit": "^1.4.0",
+    "npm-asset/filepond-plugin-image-crop": "^2.0.3",
+    "npm-asset/filepond-plugin-image-resize": "^2.0.4",
+    "npm-asset/filepond-plugin-image-transform": "^3.4.3",
+    "npm-asset/filepond-plugin-image-exif-orientation": "^1.0.6",
+    "npm-asset/filepond-plugin-image-validate-size": "^1.2.3",
+    "npm-asset/filepond-plugin-image-filter": "^1.0.0"
   },
   "autoload": {
     "psr-4": {
