@@ -30,11 +30,13 @@ class FilepondWidget extends InputWidget
     public $multiple = false;
     public $instanceOptions = [];
     public $settingsOptions = [];
+    public $language;
 
     private $encodedInstanceOptions;
 
     public function init()
     {
+        $this->language = $this->language ?? \Yii::$app->language;
         $this->options = [
             'class' => $this->filepondClass,
             'multiple' => $this->multiple,
@@ -101,6 +103,21 @@ JS;
         $this->instanceOptions['allowImageResize'] = $this->instanceOptions['allowImageResize'] ?? false;
         $this->instanceOptions['allowImageValidateSize'] = $this->instanceOptions['allowImageValidateSize'] ?? false;
         $this->instanceOptions['allowImageTransform'] = $this->instanceOptions['allowImageTransform'] ?? false;
+
+        $translateOptions = $this->configureTranslate();
+        $this->instanceOptions = array_merge($translateOptions, $this->instanceOptions);
+    }
+
+    private function configureTranslate()
+    {
+        $translateFile = __DIR__ . '/messages/' . $this->language . '/app.php';
+
+        if (file_exists($translateFile)) {
+            $translate = require $translateFile;
+        } else {
+            $translate = [];
+        }
+        return $translate;
     }
 
     private function registerAssets($view)
