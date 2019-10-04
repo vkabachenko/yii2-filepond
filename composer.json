@@ -15,6 +15,7 @@
     }
   ],
   "require": {
+    "php": "^7.1",
     "yiisoft/yii2": "~2.0.14",
     "npm-asset/filepond": "^4.4.11",
     "npm-asset/filepond-plugin-file-rename": "^1.1.4",
@@ -33,7 +34,7 @@
   },
   "autoload": {
     "psr-4": {
-      "vkabachenko\\filepond\\": ""
+      "vkabachenko\\filepond\\": "src"
     }
   },
   "repositories": [
