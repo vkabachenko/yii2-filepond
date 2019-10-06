@@ -44,7 +44,7 @@ After that you can use Filepond library to upload files in your project.
 
 ### Filepond options
 
-Filepond options described at the [documentation](https://pqina.nl/filepond/docs/) can be set by two ways.
+Filepond options described at the [documentation](https://pqina.nl/filepond/docs/) can be set by setting `instanceOptions` or `settingsOptions`.
 
 This is the preferred way:
 
@@ -69,7 +69,7 @@ If you want to add some of filepond plugins to the widget, set the allow plugin 
             'name' => 'file',
             'instanceOptions' => [
                 'allowFileSizeValidation' => true,
-                'maxFileSize' => 10M,
+                'maxFileSize' => '10M',
                 ... other options ...
             ]
          ]);
