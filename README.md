@@ -105,4 +105,34 @@ Original library isn't localized and has only english labels. This widget has ru
     ?>
 ```
 
+### Two or more widget instances on the page
+
+Simply separate widget class definitions.
+
+Widget 1:
+
+```
+    <?= FilepondWidget::widget([
+            'filepondClass' => 'filepond-class-1',
+            'name' => 'file',
+            'instanceOptions' => [
+                ... first widget options ...
+            ]
+         ]);
+    ?>
+```
+
+Widget 2:
+
+```
+    <?= FilepondWidget::widget([
+            'filepondClass' => 'filepond-class-2',
+            'model' => $uploadForm,
+            'attribute' => 'files[]',
+            'instanceOptions' => [
+                ... second widget options ...
+            ]
+         ]);
+    ?>
+```
 
